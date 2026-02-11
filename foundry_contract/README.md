@@ -64,3 +64,38 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+# Foundry Contract
+
+## Overview
+This project contains the Foundry-based implementation of the `Owner` contract. Foundry is a fast, portable, and modular toolkit for Ethereum application development written in Rust.
+
+## Deployment Details
+- **Deployer Address**: `0xAA7af02B681154F1D32dC454cee2A94fCedE65e7`
+- **Contract Address**: `0x6e7cF32E20dBbcDd2B768c44E2f98F1939D918d8`
+
+## Networks
+The contract was deployed to the following networks:
+- **Lisk Sepolia Testnet**
+- **Arc Testnet**
+
+## Commands
+### Build
+```bash
+forge build
+```
+
+### Deploy
+To deploy the contract, use the following command:
+```bash
+forge create --rpc-url "$LISK_SEPOLIA_RPC_URL" \
+  --private-key "$PRIVATE_KEY" \
+  src/Owner.sol:Owner
+```
+Replace `$LISK_SEPOLIA_RPC_URL` and `$PRIVATE_KEY` with your RPC URL and private key, respectively.
+
+### Test
+Run the tests using:
+```bash
+forge test
+```
